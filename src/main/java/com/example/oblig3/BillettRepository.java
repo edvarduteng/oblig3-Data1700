@@ -12,12 +12,12 @@ public class BillettRepository {
     @Autowired
     private JdbcTemplate db;
     public void lagreBillett(Billett innBillett){
-        String sql = "INSERT INTO Billetter (film, antall, fornavn, etternavn, telefonnr, epost) VALUES(?,?,?,?,?,?)";
+        String sql = "INSERT INTO Billett (film, antall, fornavn, etternavn, telefonnr, epost) VALUES(?,?,?,?,?,?)";
         db.update(sql, innBillett.getFilm(), innBillett.getAntall(), innBillett.getFornavn(), innBillett.getEtternavn(), innBillett.getTelefonnr(), innBillett.getEpost());
     }
 
     public List<Billett> hentAlleBilletter(){
-        String sql = "SELECT * FROM Kunde";
+        String sql = "SELECT * FROM Billett";
         List<Billett> alleBilletter = db.query(sql, new BeanPropertyRowMapper(Billett.class));
         return alleBilletter;
     }

@@ -104,8 +104,6 @@ $("#kjopBillett").click(function(){
         $("#etternavn").val("");
         $("#telefonnr").val("");
         $("#epost").val("");
-
-        console.log("Knappen trykket på");
     }
 })
 
