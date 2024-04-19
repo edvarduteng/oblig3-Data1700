@@ -17,7 +17,7 @@ public class BillettRepository {
     }
 
     public List<Billett> hentAlleBilletter(){
-        String sql = "SELECT * FROM Billett";
+        String sql = "SELECT * FROM Billett ORDER BY etternavn ASC";
         List<Billett> alleBilletter = db.query(sql, new BeanPropertyRowMapper(Billett.class));
         return alleBilletter;
     }
@@ -26,4 +26,5 @@ public class BillettRepository {
         String sql="DELETE FROM Billett";
         db.update(sql);
     }
+
 }

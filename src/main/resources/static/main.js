@@ -21,7 +21,6 @@ $("#kjopBillett").click(function(){
         validTicket = false;
         let filmError = $("#filmError");
         filmError.html("Må velge en film");
-        //filmError.style.color = "red";
 
     } else {
         $("#filmError").html("");
@@ -30,8 +29,7 @@ $("#kjopBillett").click(function(){
     if (antall < 1 || antall === "" || antall % 1 !== 0) {
         validTicket = false;
         let antallError = $("#antallError");
-        antallError.html("Må velge et antall");
-        //antallError.style.color = "red";
+        antallError.html("Må velge et positivt antall");
     } else {
         $("#antallError").html("");
     }
@@ -40,7 +38,6 @@ $("#kjopBillett").click(function(){
         validTicket = false;
         let fornavnError = $("#fornavnError");
         fornavnError.html("Må skrive noe inn i fornavnet") ;
-        //fornavnError.style.color = "red";
     } else {
         $("#fornavnError").html("");
     }
@@ -49,7 +46,6 @@ $("#kjopBillett").click(function(){
         validTicket = false;
         let etternavnError = $("#etternavnError");
         etternavnError.html("Må skrive noe inn i etternavnet");
-        //etternavnError.style.color = "red";
     } else {
         $("#etternavnError").html("");
     }
@@ -59,12 +55,10 @@ $("#kjopBillett").click(function(){
         validTicket = false;
         let telefonnrError = $("#telefonnrError");
         telefonnrError.html("Må skrive noe inn i telefonnr");
-        //telefonnrError.style.color = "red";
     } else if (!validerTelefon(telefonnr)) {
         validTicket = false;
         let telefonnrError = $("#telefonnrError");
         telefonnrError.html("Må skrive et gyldig norsk telefonnr");
-       // telefonnrError.style.color = "red";
     } else {
         $("#telefonnrError").html("");
     }
@@ -73,11 +67,10 @@ $("#kjopBillett").click(function(){
         validTicket = false;
         let epostError = $("#epostError");
         epostError.html("Må skrive noe inn i epost");
-       // epostError.style.color = "red";
     } else if (!validerEpost(epost)) {
         validTicket = false;
-        let epostError = $("epostError");
-        //epostError.html("Må skrive en gyldig e-post");
+        let epostError = $("#epostError");
+        epostError.html("Må skrive en gyldig e-post");
     } else {
         $("#epostError").html("");
     }
@@ -98,7 +91,7 @@ $("#kjopBillett").click(function(){
             hentAlle();
         })
 
-        $("#filmOption").val("");
+        $("#filmOption").val("-1");
         $("#antall").val("");
         $("#fornavn").val("");
         $("#etternavn").val("");
