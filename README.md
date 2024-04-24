@@ -4,6 +4,8 @@ GitHub brukernavn: edvarduteng
 
 GitHub repo URL: https://github.com/edvarduteng/Oblig3-DATA1700
 
+Youtube video som viser prosjektet: https://youtu.be/td-j-FhIL5g?si=9LuJ6lLC3RexK6rG
+
 Fullt navn: Edvard Uteng
 
 Kort beskrivelse av applikasjon (5-10 setninger):
