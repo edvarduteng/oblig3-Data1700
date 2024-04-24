@@ -1,3 +1,7 @@
+$(function(){
+    hentAlle();
+})
+
 function validerEpost(epost) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(epost);
